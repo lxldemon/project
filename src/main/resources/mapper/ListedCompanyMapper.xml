@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xxx.project.dao.ListedCompanyMapper">
+
+
+    <select id="getCompanyList" resultType="com.xxx.project.entity.response.ListedCompanyResponse">
+
+        select * from listed_company where 1=1
+
+
+        <if test="companyName != null and companyName != ''">
+           and company_name like '%${companyName}%'
+        </if>
+
+
+
+    </select>
+
+    <insert id="addCompany">
+        insert into listed_company(company_name,remark) values(#{companyName},#{remark})
+    </insert>
+</mapper>
