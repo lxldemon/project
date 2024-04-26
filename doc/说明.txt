@@ -1,1 +1,8 @@
 https://start.aliyun.com/bootstrap.html
+
+1、列表接口
+http://localhost:8080/listed_company/list?pageNum=1&pageSize=2&companyName=222
+
+
+2、新增接口
+http://localhost:8080/listed_company/add?companyName=jx3333&remark=1
