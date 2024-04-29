@@ -4,16 +4,10 @@
 
 
     <select id="getCompanyList" resultType="com.xxx.project.entity.response.ListedCompanyResponse">
-
         select * from listed_company where 1=1
-
-
         <if test="companyName != null and companyName != ''">
            and company_name like '%${companyName}%'
         </if>
-
-
-
     </select>
 
     <insert id="addCompany">

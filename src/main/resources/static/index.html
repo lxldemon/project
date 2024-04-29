@@ -1,6 +1,29 @@
 <html>
-    <body>
-        <h1>hello word!!!222</h1>
-        <p>this is a html page</p>
-    </body>
+
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="/webjars/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+        #list thead td{
+            border:1px solid black;
+            width:100px;
+        }
+    </style>
+    <script type="text/javascript">
+        $(function(){
+            // 初始化方法
+            $.get("listed_company/list?pageNum=1&pageSize=10",{},function(res){
+                var list = res.data.list;
+                for(var i=0;i<list.length;i++){
+                    $("div").append(list[i].id).append(list[i].companyName).append(list[i].remark).append("<br/>");
+                }
+            })
+        })
+    </script>
+</head>
+<body>
+<div>
+</div>
+
+</body>
 </html>
