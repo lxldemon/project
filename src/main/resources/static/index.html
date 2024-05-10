@@ -12,7 +12,7 @@
     <script type="text/javascript">
         $(function(){
             // 初始化方法
-            $.get("listed_company/list?pageNum=1&pageSize=10",{},function(res){
+            $.get("admin/list?pageNum=1&pageSize=10",{},function(res){
                 var list = res.data.list;
                 for(var i=0;i<list.length;i++){
                     $("div").append(list[i].id).append(list[i].companyName).append(list[i].remark).append("<br/>");

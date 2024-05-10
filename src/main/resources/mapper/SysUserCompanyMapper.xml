@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xxx.project.dao.SysUserCompanyMapper">
+    <insert id="add">
+        insert into sys_user (user_name,password,sex)
+        values(#{userName},#{password},#{sex})
+    </insert>
+
+    <delete id="delete">
+        delete from sys_user where id=2
+    </delete>
+
+
+    <select id="getList" resultType="com.xxx.project.entity.response.SysUserResponse">
+        select * from sys_user
+        where 1=1
+        <if test="username != null and username != ''">
+            and user_name like '%${username}%'
+        </if>
+    </select>
+</mapper>

@@ -1,5 +1,5 @@
 https://start.aliyun.com/bootstrap.html
-
+install   MybatisX 插件
 1、列表接口
 http://localhost:8080/listed_company/list?pageNum=1&pageSize=2&companyName=222
 
